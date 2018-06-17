@@ -3,7 +3,7 @@ DROP TABLE days;
 
 CREATE TABLE days (
   id SERIAL4 PRIMARY KEY,
-  day VARCHAR(255),
+  day VARCHAR(255)
 );
 
 CREATE TABLE users (

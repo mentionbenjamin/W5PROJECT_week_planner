@@ -9,7 +9,15 @@ class Day
     @day = options["day"]
   end
 
-
+  def save()
+    sql = "INSERT INTO days
+          (day)
+          VALUES ($1)
+          RETURNING id"
+    values = [@day]
+    day_data = SqlRunner.run(sql, values)
+    @id = day_data.first()["id"].to_i()
+  end
 
 
 
