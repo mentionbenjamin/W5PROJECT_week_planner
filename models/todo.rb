@@ -36,5 +36,13 @@ class Todo
     return Note.new( results.first )
   end
 
+  def day()
+    sql = "SELECT * FROM days
+    WHERE id = $1"
+    values = [@day_id]
+    results = SqlRunner.run( sql, values )
+    return Day.new( results.first )
+  end
+
 
 end
