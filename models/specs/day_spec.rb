@@ -12,7 +12,7 @@ class DayTest < MiniTest::Test
   end
 
   def test_day()
-    assert_equal("Monday", @day.day())
+    assert_equal(1, @day.id())
   end
 
 end

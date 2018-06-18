@@ -6,14 +6,14 @@ class NoteTest < MiniTest::Test
   def setup()
     options = {
       "id" => 1,
-      "title" => "Family Dinner at Grannies"
+      "title" => "Dinner at Grannies",
       "description" => "3pm, dress smart, all family attending"
     }
-    @user = Note.new(options)
+    @note = Note.new(options)
   end
 
   def test_title()
-    assert_equal("Family Dinner at Grannies", @note.day())
+    assert_equal("Dinner at Grannies", @note.title())
   end
 
 end
