@@ -1,9 +1,9 @@
 require_relative("../models/note.rb")
 require_relative("../models/day.rb")
-require_relative("../models/calendar.rb")
+require_relative("../models/todo.rb")
 require("pry")
 
-# Calendar.delete_all()
+# Todo.delete_all()
 # Note.delete_all()
 # Day.delete_all()
 
@@ -20,27 +20,48 @@ note1.save()
 note2.save()
 
 day1 = Day.new({
-  "day" => "Monday"
+  "day" => "Sunday"
 })
 day2 = Day.new({
+  "day" => "Monday"
+})
+day3 = Day.new({
   "day" => "Tuesday"
+})
+day4 = Day.new({
+  "day" => "Wednesday"
+})
+day5 = Day.new({
+  "day" => "Thursday"
+})
+day6 = Day.new({
+  "day" => "Friday"
+})
+day7 = Day.new({
+  "day" => "Saturday"
 })
 
 day1.save()
 day2.save()
+day3.save()
+day4.save()
+day5.save()
+day6.save()
+day7.save()
 
-calendar1 = Calendar.new({
+
+todo1 = Todo.new({
   "note_id" => note1.id,
   "day_id" => day1.id
 })
 
-calendar2 = Calendar.new({
+todo2 = Todo.new({
   "note_id" => note2.id,
   "day_id" => day2.id
 })
 
-calendar1.save()
-calendar2.save()
+todo1.save()
+todo1.save()
 
 
 binding.pry

@@ -1,6 +1,6 @@
 require_relative("../db/sql_runner.rb")
 
-class Calendar
+class Todo
 
   attr_reader(:id, :note_id, :day_id)
 
@@ -12,7 +12,7 @@ class Calendar
 
 
   def save()
-    sql = "INSERT INTO calendars
+    sql = "INSERT INTO todos
           (note_id, day_id)
           VALUES ($1, $2)
           RETURNING id"

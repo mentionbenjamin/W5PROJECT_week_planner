@@ -1,9 +1,9 @@
 require("minitest/autorun")
-require_relative("../calendar.rb")
+require_relative("../todo.rb")
 require_relative("../note.rb")
 require_relative("../day.rb")
 
-class CalendarTest < MiniTest::Test
+class TodoTest < MiniTest::Test
 
   def setup()
     options = {
@@ -11,11 +11,11 @@ class CalendarTest < MiniTest::Test
       "note_id" => @note_id,
       "day_id" => @day_id
     }
-    @calendar = Calendar.new(options)
+    @todo = Todo.new(options)
   end
 
-  def test_calendar()
-    assert_equal(1, @calendar.id())
+  def test_todo()
+    assert_equal(1, @todo.id())
   end
 
 end
