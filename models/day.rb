@@ -18,18 +18,18 @@ class Day
     day_data = SqlRunner.run(sql, values)
     @id = day_data.first()["id"].to_i()
   end
-
-  def self.all()
-    sql = "SELECT * FROM days"
-    days = SqlRunner.run(sql)
-    result = days.map{|day| Day.new(day)}
-    return result
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM days"
-    SqlRunner.run(sql)
-  end
+  #
+  # def self.all()
+  #   sql = "SELECT * FROM days"
+  #   days = SqlRunner.run(sql)
+  #   result = days.map{|day| Day.new(day)}
+  #   return result
+  # end
+  #
+  # def self.delete_all()
+  #   sql = "DELETE FROM days"
+  #   SqlRunner.run(sql)
+  # end
 
 
 

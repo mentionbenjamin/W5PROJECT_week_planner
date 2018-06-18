@@ -11,4 +11,15 @@ class Calendar
   end
 
 
+  def save()
+    sql = "INSERT INTO calendars
+          (note_id, day_id)
+          VALUES ($1, $2)
+          RETURNING id"
+    values = [@note_id, @day_id]
+    day_data = SqlRunner.run(sql, values)
+    @id = day_data.first()["id"].to_i()
+  end
+
+
 end
