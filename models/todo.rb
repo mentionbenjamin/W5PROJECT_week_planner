@@ -28,7 +28,7 @@ class Todo
     return result
   end
 
-  def note()
+  def note() #SELECT ALL NOTES FROM TO-DO
     sql = "SELECT * FROM notes
     WHERE id = $1"
     values = [@note_id]
@@ -36,12 +36,17 @@ class Todo
     return Note.new( results.first )
   end
 
-  def day()
+  def day() #SELECT ALL DAYS FROM TO-DO
     sql = "SELECT * FROM days
     WHERE id = $1"
     values = [@day_id]
     results = SqlRunner.run( sql, values )
     return Day.new( results.first )
+  end
+
+  def self.delete_all #DELETE ALL
+    sql = "DELETE FROM todos"
+    SqlRunner.run(sql)
   end
 
 
