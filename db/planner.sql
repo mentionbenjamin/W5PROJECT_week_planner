@@ -1,4 +1,4 @@
-DROP TABLE users;
+DROP TABLE notes;
 DROP TABLE days;
 
 CREATE TABLE days (
@@ -6,7 +6,7 @@ CREATE TABLE days (
   day VARCHAR(255)
 );
 
-CREATE TABLE users (
+CREATE TABLE notes (
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(255),
   description VARCHAR(255),
