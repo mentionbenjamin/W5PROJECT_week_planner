@@ -28,5 +28,13 @@ class Todo
     return result
   end
 
+  def note()
+    sql = "SELECT * FROM notes
+    WHERE id = $1"
+    values = [@note_id]
+    results = SqlRunner.run( sql, values )
+    return Note.new( results.first )
+  end
+
 
 end
