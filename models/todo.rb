@@ -21,5 +21,12 @@ class Todo
     @id = day_data.first()["id"].to_i()
   end
 
+  def self.all() #SELECT ALL FROM TO-DO
+    sql = "SELECT * FROM todos"
+    todos = SqlRunner.run(sql)
+    result = todos.map{|todo| Todo.new(todo)}
+    return result
+  end
+
 
 end
