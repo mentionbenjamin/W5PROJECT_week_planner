@@ -22,9 +22,17 @@ class Note
 
   def self.all() #SELECT ALL FROM NOTES
     sql = "SELECT * FROM notes"
-    days = SqlRunner.run(sql)
+    notes = SqlRunner.run(sql)
     result = notes.map{|note| Note.new(note)}
     return result
+  end
+
+  def self.find(id) #FIND BY ID
+    sql = "SELECT * FROM notes
+           WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Note.new(results.first)
   end
 
 
