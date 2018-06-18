@@ -40,6 +40,13 @@ class Note
     SqlRunner.run(sql)
   end
 
+  def day() #JOINING TO DAYS AND TO-DO
+    sql = "SELECT days.* FROM days INNER JOIN todos ON todos.day_id = days.id WHERE todos.note_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map {|note| Note.new(note)}
+  end
+
 
 
 

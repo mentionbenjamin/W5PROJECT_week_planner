@@ -49,5 +49,12 @@ class Todo
     SqlRunner.run(sql)
   end
 
+  def self.destroy(id) #DELETE BY ID
+    sql = "DELETE FROM todos
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
+  end
+
 
 end
