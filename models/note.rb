@@ -20,6 +20,8 @@ class Note
     @id = note_data.first()["id"].to_i()
   end
 
+  
+
 
 
 end

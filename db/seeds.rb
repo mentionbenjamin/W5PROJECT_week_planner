@@ -5,7 +5,6 @@ require("pry")
 
 # Todo.delete_all()
 # Note.delete_all()
-# Day.delete_all()
 
 note1 = Note.new({
   "title" => "Family Roast at 3pm",
