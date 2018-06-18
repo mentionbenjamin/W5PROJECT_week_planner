@@ -15,6 +15,6 @@ CREATE TABLE notes (
 
 CREATE TABLE todos (
   id SERIAL4 PRIMARY KEY,
-  note_id INT8 REFERENCES notes(id),
-  day_id INT8 REFERENCES days(id)
+  note_id INT8 REFERENCES notes(id) ON DELETE CASCADE,
+  day_id INT8 REFERENCES days(id) ON DELETE CASCADE
 );

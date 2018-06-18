@@ -34,6 +34,11 @@ class Day
     return Day.new(results.first)
   end
 
+  def self.delete_all #DELETE ALL
+    sql = "DELETE FROM days"
+    SqlRunner.run(sql)
+  end
+
 
 
 end
