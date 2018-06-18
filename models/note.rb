@@ -20,7 +20,14 @@ class Note
     @id = note_data.first()["id"].to_i()
   end
 
-  
+  def self.all() #SELECT ALL FROM NOTES
+    sql = "SELECT * FROM notes"
+    days = SqlRunner.run(sql)
+    result = notes.map{|note| Note.new(note)}
+    return result
+  end
+
+
 
 
 
