@@ -1,0 +1,9 @@
+<h1>list all notes homepage</h1>
+
+
+<!-- search all of notes & print note title & description -->
+<% for note in @notes %>
+  <p>Title: <%= note.title %></p>
+  <p>Description: <%= note.description %></p>
+  <hr>
+<% end %>
