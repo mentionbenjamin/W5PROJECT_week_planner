@@ -17,24 +17,23 @@ end
 
 #NEW
 get "/planner/new" do
-  @note = Note.all
-  @day = Day.all
+  @days = Day.all
   erb(:'todo_list/new')
 end
 
-#SAVE
-post "planner" do
-  todo = Todo.new(params)
-  todo.save
+#CREATE
+post "/planner" do
+  note = Note.new(params)
+  note.save()
+  params["note_id"] = note.id
+  for day in params["day_array"]
+    params["day_id"] = day
+    todo = Todo.new(params)
+    todo.save
+  end
   redirect to("/planner")
 end
 
-#CREATE
-post '/planner' do # create
-  @todo = Todo.new(params)
-  @todo.save()
-  redirect to("/planner")
-end
 
 # get "/planner/:day_id" do
 #
