@@ -13,12 +13,20 @@ get '/notes' do
   erb(:'notes/index')
 end
 
+#FIND BY ID
 get '/notes/:id' do
   @note = Note.find(params['id'].to_i)
   erb(:'notes/show')
 end
 
-post '/notes/:id/delete' do # delete
+#EDIT
+get '/notes/:id/edit' do
+  @note = Note.find(params[:id])
+  erb(:edit)
+end
+
+#DELETE
+post '/notes/:id/delete' do
   note = Note.find(params[:id])
   note.delete()
   redirect to '/notes'
