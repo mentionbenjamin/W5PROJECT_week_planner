@@ -19,4 +19,6 @@ get '/days/:id' do
 end
 
 
+
+
 # do loop to display all day notes
