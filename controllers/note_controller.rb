@@ -21,5 +21,5 @@ end
 post '/notes/:id/delete' do # delete
   note = Note.find(params[:id])
   note.delete()
-  redirect to '/planner'
+  redirect to '/notes'
 end
