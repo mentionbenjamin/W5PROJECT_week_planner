@@ -22,12 +22,19 @@ end
 #EDIT
 get '/notes/:id/edit' do
   @note = Note.find(params[:id])
-  erb(:edit)
+  erb(:'notes/edit')
+end
+
+#UPDATE
+post '/notes/:id' do
+  @note = Note.new(params)
+  @note.update
+  redirect to '/notes'
 end
 
 #DELETE
 post '/notes/:id/delete' do
   note = Note.find(params[:id])
   note.delete()
-  redirect to '/notes'
+  redirect to '/days'
 end

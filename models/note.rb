@@ -20,6 +20,22 @@ class Note
     @id = note_data.first()["id"].to_i()
   end
 
+  def update()
+    sql = "UPDATE notes
+    SET
+    (
+      title,
+      description
+    ) =
+    (
+      $1,
+      $2
+    )
+    WHERE id = $3"
+    values = [@title, @description, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all() #SELECT ALL FROM NOTES
     sql = "SELECT * FROM notes"
     notes = SqlRunner.run(sql)

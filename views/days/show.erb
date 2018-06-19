@@ -4,6 +4,8 @@
   <p>Title: <%= note.title %></p>
   <p>Description: <%= note.description %></p>
 
+  <p><a href="/notes/<%= note.id %>/edit">Edit Note</a></p>
+
   <form method="post" action="/notes/<%= note.id %>/delete">
     <input type="submit" value="Delete Note"/>
   </form>
@@ -12,15 +14,3 @@
 
 
 <% end %>
-
-
-<!--
-for notes in day
-print notes
-
-quest advisor inner join
-place.visitors
-visitor.places
-
-
-week 3 day 4 -->

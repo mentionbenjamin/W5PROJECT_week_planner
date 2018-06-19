@@ -6,7 +6,7 @@
   <p>Title: <%= note.title %></p>
   <p>Description: <%= note.description %></p>
 
-  <p><a href="/notes/<%= @note.id %>/edit">Edit Note</a></p>
+  <p><a href="/notes/<%= note.id %>/edit">Edit Note</a></p>
 
   <form method="post" action="/notes/<%= note.id %>/delete">
     <input type="submit" value="Delete Note"/>
