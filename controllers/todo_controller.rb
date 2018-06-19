@@ -29,5 +29,5 @@ post "/planner" do
     todo = Todo.new(params)
     todo.save
   end
-  redirect to("/planner")
+  redirect to("/notes")
 end
