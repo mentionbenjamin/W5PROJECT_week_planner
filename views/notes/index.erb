@@ -6,4 +6,9 @@
   <p>Title: <%= note.title %></p>
   <p>Description: <%= note.description %></p>
   <hr>
+
+<form method="post" action="/notes/<%= note.id %>/delete">
+  <input type="submit" value="Delete Note"/>
+</form>
+
 <% end %>

@@ -18,5 +18,8 @@ get '/notes/:id' do
   erb(:'notes/show')
 end
 
-
-# do loop to display all day notes
+post '/notes/:id/delete' do # delete
+  note = Note.find(params[:id])
+  note.delete()
+  redirect to '/planner'
+end

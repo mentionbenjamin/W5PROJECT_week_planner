@@ -35,6 +35,13 @@ class Note
     return Note.new(results.first)
   end
 
+  def delete()
+  sql = "DELETE FROM notes
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run( sql, values )
+  end
+
   def self.delete_all #DELETE ALL
     sql = "DELETE FROM notes"
     SqlRunner.run(sql)

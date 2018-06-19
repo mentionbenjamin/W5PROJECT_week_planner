@@ -6,8 +6,6 @@ require_relative('../models/day')
 require('pry')
 also_reload("./models/*")
 
-
-
 #INDEX
 get '/planner' do
   @note = Note.all
@@ -33,8 +31,3 @@ post "/planner" do
   end
   redirect to("/planner")
 end
-
-
-# get "/planner/:day_id" do
-#
-# end
