@@ -1,5 +1,6 @@
 <h1>Days Index</h1>
 
+<!-- for each day in days go to page of the specific day -->
 <% @days.each do |day| %>
-  <a href="/days/:id"><p><%= day.day() %></p></a>
+  <a href="/days/<%= day.id %>"><p><%= day.day() %></p></a>
 <% end %>

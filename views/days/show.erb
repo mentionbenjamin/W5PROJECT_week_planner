@@ -1,5 +1,5 @@
 <!-- search all of day & output the notes of that day -->
-<% for note in day.note %>
+<% for note in @day.notes %>
 
   <p>Title: <%= note.title %></p>
   <p>Description: <%= note.description %></p>
@@ -7,7 +7,7 @@
 <% end %>
 
 
-<!-- 
+<!--
 for notes in day
 print notes
 
