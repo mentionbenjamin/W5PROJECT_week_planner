@@ -1,0 +1,379 @@
+/* --- ADD FORM START --- */
+
+.add-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  max-width: 100%;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.form-contents-container {
+  padding-top: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.form-header {
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: -0.3px;
+}
+.note-mark {
+  font-weight: 500;
+  background: none;
+  color: white;
+}
+input {
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  width: 80%;
+  resize: none;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* ADD A NOTE TITLE START */
+
+#input-box-container {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+.input-box {
+  width: 300px !important;
+  height: 20px;
+  font-size: 20px;;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  /* font-style: italic; */
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 11px;
+}
+.text-area {
+  opacity: 1;
+  background-color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 0.6;
+  font-style: italic;
+}
+span {
+  position: absolute;
+  left: 0%;
+  content: '';
+  height: 28.5px;
+  background: white;
+  transition: all 0.5s linear;
+  width: 0;
+  bottom: 0px;
+  opacity: 0.1;
+  border-radius: 17px;
+}
+input.input-box:hover, input.input-box:focus ~ span {
+	width: 322px;
+  cursor: text;
+}
+input.input-box[type="text"], textarea { /* no border outline of input box */
+	outline: none;
+	box-shadow:none !important;
+}
+input.input-box:focus::-webkit-input-placeholder { /* placeholder text disappears on click */
+	color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+/* ADD A NOTE TITLE END */
+
+/* --- WEEKDAY CHECKBOXES START --- */
+
+.weekday-checkbox-header {
+  padding-top: 50px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+}
+.weekday-checkbox-container {
+  padding-top: 20px;
+  transform: scale(1.5);
+}
+.each-checkbox {
+  display:inline-block;
+}
+input[type="checkbox"]{
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+label[for="sunday"]{
+  background: url("./images/sunday.svg") no-repeat;
+}
+label[for="monday"]{
+  background: url("./images/monday.svg") no-repeat;
+}
+label[for="tuesday"]{
+  background: url("./images/tuesday.svg") no-repeat;
+}
+label[for="wednesday"]{
+  background: url("./images/wednesday.svg") no-repeat;
+}
+label[for="thursday"]{
+  background: url("./images/thursday.svg") no-repeat;
+}
+label[for="friday"]{
+  background: url("./images/friday.svg") no-repeat;
+}
+label[for="saturday"]{
+  background: url("./images/saturday.svg") no-repeat;
+}
+label[for="sunday"],
+label[for="monday"],
+label[for="tuesday"],
+label[for="wednesday"],
+label[for="thursday"],
+label[for="friday"],
+label[for="saturday"]{
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  color: rgba(255,0,0,0);
+}
+input:checked + label[for="sunday"],
+input:checked + label[for="monday"],
+input:checked + label[for="tuesday"],
+input:checked + label[for="wednesday"],
+input:checked + label[for="thursday"],
+input:checked + label[for="friday"],
+input:checked + label[for="saturday"]{
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+/* --- WEEKDAY CHECKBOXES END --- */
+
+.submit {
+  cursor: pointer;
+  transition: 1s;
+  width: 50px;
+  margin-top: 18px;
+}
+.submit:hover {
+  transform: rotate(360deg);
+}
+
+/* --- ADD FORM END --- */
+
+/* --- POP UP WINDOW START --- */
+
+.dot { /* actual dot to click on */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/* PULSATING DOT START */
+
+.click-dot-add {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.add {
+  width: 50px;
+  height: 50px;
+  animation: pulse-dot 1.25s infinite;
+}
+.dot-pulse {
+  width: 50px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  animation: pulse-ring 1.8s infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+
+  }
+}
+
+/* PULSATING DOT END */
+
+.reference-to-form-container {
+  display: none; /* don't show form */
+}
+.reference-to-form-container:target {
+  display: block;/* do show form once clicked */
+}
+.anywhere-exit-window { /* to be able to click anywhere to close */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.pop-up-box {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  background: rgb(252,77,124);
+  background: linear-gradient(144deg,
+              rgba(252,77,124,1) 0%,
+              rgba(252,66,128,1) 31%,
+              rgba(252,88,69,1) 100%);
+  border-radius: 30px;
+  animation: enlargen 1s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+@keyframes enlargen {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 582px;
+    height: 500px;
+  }
+}
+@keyframes smallen {
+  from {
+    width: 582px;
+    height: 500px;
+  }
+  to {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* --- POP UP WINDOW END --- */
+
+/*--- DAILY DOTS START ---*/
+
+#click-dot {
+    display: none;
+}
+#click-dot:checked + label img.sun {
+    animation: move-left-sun 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-sun {
+    0%{opacity: 0;}
+    50% {transform: translateX(-270px) translateX()}
+    100% {transform: translateX(-270px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.mon {
+    animation: move-left-mon 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-mon{
+    0%{opacity: 0;}
+    50% {transform: translateX(-180px) translateX()}
+    100% {transform: translateX(-180px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.tue {
+    animation: move-left-tue 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-tue {
+    0%{opacity: 0;}
+    50% {transform: translateX(-90px) translateX()}
+    100% {transform: translateX(-90px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.wed {
+    animation: move-left-wed 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-wed {
+    0%{opacity: 0}
+    100% {transform: translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.thu {
+    animation: move-left-thu 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-thu {
+    0%{opacity: 0;}
+    50% {transform: translateX(90px) translateX()}
+    100% {transform: translateX(90px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.fri {
+    animation: move-left-fri 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-fri{
+    0%{opacity: 0;}
+    50% {transform: translateX(180px) translateX()}
+    100% {transform: translateX(180px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.sat {
+    animation: move-left-sat 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-sat {
+    0%{opacity: 0;}
+    50% {transform: translateX(270px) translateX()}
+    100% {transform: translateX(270px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.add-vanish {
+    animation: move-left-add-vanish 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes move-left-add-vanish {
+    0%{opacity: 0;}
+    100% {transform: translateX(270px) translateY(3000px); opacity: 0;}
+}
+
+/*--- DAILY DOTS END ---*/

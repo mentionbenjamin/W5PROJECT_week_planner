@@ -1,21 +1,109 @@
-<form method="post" action="/planner">
 
-  <label for="title">Title of note:</label>
-  <input id="title" type="text" name="title" />
 
-  <br>
+<a href="#reference-to-form"> <!-- click on dot to open form -->
+    <label for="click-dot-add">
+      <!--- PULSATING DOT START --->
+      <div class="pulsating-add">
+        <img class="dot add" src="/images/home-add.svg">
+        <img class="dot-pulse" src="/images/home-pulse.svg">
+      </div>
+      <!--- PULSATING DOT END --->
+    </label>
+</a>
 
-  <label for="description">Description of note:</label>
-  <input id="description" type="text" name="description" />
+<!--- POP UP FORM WINDOW START --->
 
-  <br>
+<div id="reference-to-form" class="reference-to-form-container">
+  <a href="#" class="anywhere-exit-window"></a>
+  <div class="pop-up-box">
+    <!--- ADD FORM START --->
+    <form class="add-form" method="post" action="/planner">
+      <div class="form-contents-container">
+        <h1 class="form-header"><mark class="note-mark">before</mark> you forget...</h1>
+        <br>
+        <label for="add note"></label>
+        <br>
+        <div id="input-box-container">
+        <input class="input-box" autocomplete="off" type="text" textarea name="title" placeholder="add a note..."></textarea><span></span>
+        </div>
+        <br>
+        <br>
+        <div id="input-box-container">
+        <input class="input-box" autocomplete="off" type="text" textarea name="description" placeholder="tell me more..."></textarea><span></span>
+        </div>
+        <br>
+        <div class="weekday-checkbox-header">assign to a day...</div>
+          <div class="weekday-checkbox-container">
+            <% for day in @days  %>
+              <div class="each-checkbox">
+                <input type="checkbox" name="day_array[]" value="<%= day.id  %>" id="<%= day.day.downcase %>">
+                <label for="<%= day.day.downcase %>">.</label>
+                <br>
+              </div>
+            <% end %>
+          </div>
+          <input class="submit" type=image src="/images/add.svg">
+        </div>
+      </div>
+    </form>
+    <!--- ADD FORM END --->
+  </div>
+</div>
 
-  <label for="day">Select a day:</label>
-  <% for day in @days  %>
-      <input type="checkbox" name="day_array[]" value="<%= day.id  %>" id="day"><%= day.day  %>
-  <% end %>
-  <br>
+<!--- POP UP FORM WINDOW END --->
 
-  <input type="submit" value="Add Note">
+<% for day in @days  %>
+  <div class="each-checkbox">
+    <input type="checkbox"
+           name="day_array[]"
+           value="<%= day.id  %>"
+           id="<%= day.day.downcase %>">
 
-</form>
+    <label for="<%= day.day.downcase %>">.</label>
+
+    <br>
+  </div>
+<% end %>
+
+
+
+ <% for day in @days  %>
+
+ <input type="checkbox" id="click-dot">
+    <label for="click-dot">
+    <a href="/<%= day.day.downcase %>">
+      <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
+    </a>
+
+ <% end %>
+
+
+<!--- DAILY DOTS START --->
+
+<input type="checkbox" id="click-dot">
+<label for="click-dot">
+  <a href="/days/:id">
+    <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot mon" src="/images/home-monday.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot tue" src="/images/home-tuesday.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot wed" src="/images/home-wednesday.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot thu" src="/images/home-thursday.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot fri" src="/images/home-friday.svg">
+  </a>
+  <a href="/days/:id">
+    <img class="dot sat" src="/images/home-saturday.svg">
+  </a>
+  <img class="dot add-vanish" src="/images/home-add.svg">
+</label>
+
+<!--- DAILY DOTS END --->
