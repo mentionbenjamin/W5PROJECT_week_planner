@@ -230,7 +230,7 @@ input:checked + label[for="saturday"]{
   bottom: 0;
   left: 0;
   z-index: -1;
-  animation: pulse-ring 1.8s infinite;
+  animation: pulse-ring 1.2s infinite;
 }
 @keyframes pulse-ring {
   0% {

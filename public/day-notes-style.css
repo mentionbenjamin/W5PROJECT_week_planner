@@ -1,0 +1,78 @@
+.day-notes-container {
+  padding-top: 40px;
+  background: rgb(252,77,124);
+  background: linear-gradient(144deg,
+              rgba(252,77,124,1) 0%,
+              rgba(252,66,128,1) 31%,
+              rgba(252,88,69,1) 100%);
+  border-radius: 30px;
+  display: inline-block;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.day-notes-header {
+  padding: 5px 0 30px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: -0.3px;
+}
+.note-mark {
+  font-weight: 500;
+  background: none;
+  color: white;
+}
+.individual-note-container {
+  min-height: 70px;
+  width: 400px;
+  font-size: 20px;;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 12px 0 12px 17px;
+  margin: 0 auto;
+  text-align: left;
+  word-wrap: break-word;
+  opacity: 0.8;
+}
+.actual-note {
+  width: 350px;
+}
+.note-spacer-hr {
+  border: 0;
+  width: 330px;
+  margin-left: 0;
+  height: 1px;
+background: white;
+  opacity: 0.2;
+}
+.note-description {
+  display: block;
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 19px;
+}
+.edit-delete-container {
+  float: right;
+  text-align: center;
+  padding-right: 13px;
+  margin-top: -80px;
+  display: block;
+}
+.delete-icon {
+  margin-top: -10px;
+  margin-right: 9px;
+}

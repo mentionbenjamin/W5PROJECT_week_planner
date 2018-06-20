@@ -36,5 +36,5 @@ end
 post '/notes/:id/delete' do
   note = Note.find(params[:id])
   note.delete()
-  redirect to '/days'
+  redirect to '/planner/new'
 end
