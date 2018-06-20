@@ -69,11 +69,11 @@
 
  <% for day in @days  %>
 
- <input type="checkbox" id="click-dot">
-    <label for="click-dot">
-    <a href="/<%= day.day.downcase %>">
-      <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
-    </a>
+  <input type="checkbox" id="click-dot">
+  <label for="click-dot">
+  <a href="/<%= day.day.downcase %>">
+    <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
+  </a>
 
  <% end %>
 
@@ -82,27 +82,18 @@
 
 <input type="checkbox" id="click-dot">
 <label for="click-dot">
-  <a href="/days/:id">
-    <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot mon" src="/images/home-monday.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot tue" src="/images/home-tuesday.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot wed" src="/images/home-wednesday.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot thu" src="/images/home-thursday.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot fri" src="/images/home-friday.svg">
-  </a>
-  <a href="/days/:id">
-    <img class="dot sat" src="/images/home-saturday.svg">
-  </a>
+
+
+
+  <% @days.each do |day| %>
+    <a href="/days/<%= day.id %>">
+      <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
+    </a>
+    <a href="/days/<%= day.id %>">
+      <img class="dot mon" src="/images/home-<%=day.day.downcase%>.svg">
+    </a>
+  <% end %>
+
   <img class="dot add-vanish" src="/images/home-add.svg">
 </label>
 
