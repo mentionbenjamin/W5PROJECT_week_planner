@@ -67,17 +67,6 @@
 
 
 
- <% for day in @days  %>
-
-  <input type="checkbox" id="click-dot">
-  <label for="click-dot">
-  <a href="/<%= day.day.downcase %>">
-    <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
-  </a>
-
- <% end %>
-
-
 <!--- DAILY DOTS START --->
 
 <input type="checkbox" id="click-dot">
@@ -86,11 +75,9 @@
 
 
   <% @days.each do |day| %>
+
     <a href="/days/<%= day.id %>">
-      <img class="dot sun" src="/images/home-<%=day.day.downcase%>.svg">
-    </a>
-    <a href="/days/<%= day.id %>">
-      <img class="dot mon" src="/images/home-<%=day.day.downcase%>.svg">
+      <img class="dot <%= day.day.downcase %>" src="/images/home-<%=day.day.downcase%>.svg">
     </a>
   <% end %>
 
