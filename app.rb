@@ -6,5 +6,5 @@ require_relative('controllers/todo_controller')
 also_reload("./models/*")
 
 get '/' do
-  erb( :index )
+  redirect "/planner/new"
 end

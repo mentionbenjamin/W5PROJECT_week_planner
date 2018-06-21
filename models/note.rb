@@ -22,15 +22,8 @@ class Note
 
   def update()
     sql = "UPDATE notes
-    SET
-    (
-      title,
-      description
-    ) =
-    (
-      $1,
-      $2
-    )
+    SET (title, description) =
+    ($1, $2)
     WHERE id = $3"
     values = [@title, @description, @id]
     SqlRunner.run(sql, values)
