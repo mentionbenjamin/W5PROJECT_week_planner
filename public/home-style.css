@@ -83,7 +83,7 @@ button:focus {
   opacity: 0.6;
   font-style: italic;
 }
-span {
+.ph {
   position: absolute;
   left: 0%;
   content: '';
