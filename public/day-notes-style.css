@@ -65,29 +65,13 @@
   background: white;
   opacity: 0.2;
 }
-.delete-icon {
-  float: right;
-  text-align: center;
-  padding-right: 100px;
-  margin-top: 17px;
-  display: block;
-  opacity: 0.3;
-}
 
-button.input[type="submit"], input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-/* img:hover {
+
+.delete-button:hover {
   opacity: 1;
   transition: 0.5s ease;
   cursor: pointer;
-} */
+}
 
 
 table {
@@ -95,7 +79,7 @@ table {
 }
 
 td {
-  padding-bottom: 75px;
+  padding-bottom: 38px;
   border: 20px;
 
 }
