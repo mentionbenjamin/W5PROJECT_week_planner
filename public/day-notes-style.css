@@ -38,6 +38,7 @@
   margin: 0 auto;
   left: 92px !important;
   display: table;
+
 }
 .individual-note-container-child {
   min-height: 70px;
@@ -64,32 +65,37 @@
   background: white;
   opacity: 0.2;
 }
-.note-description {
-  display: block;
-  font-size: 16px;
-  opacity: 0.9;
-  line-height: 19px;
-}
-.edit-delete-container {
+.delete-icon {
   float: right;
   text-align: center;
-  padding-right: 13px;
-  margin-top: -80px;
+  padding-right: 100px;
+  margin-top: 17px;
   display: block;
+  opacity: 0.3;
 }
-.delete-icon {
-  margin-top: -10px;
-  margin-right: 9px;
+
+button.input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
+/* img:hover {
+  opacity: 1;
+  transition: 0.5s ease;
+  cursor: pointer;
+} */
 
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+  width: 100%;
 }
 
 td {
-padding-bottom: 120px;
+  padding-bottom: 75px;
   border: 20px;
 
 }

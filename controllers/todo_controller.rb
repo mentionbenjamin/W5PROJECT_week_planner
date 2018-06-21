@@ -11,7 +11,6 @@ get '/days' do
   erb(:'days/index')
 end
 
-
 #INDEX
 get '/planner' do
   @note = Note.all
@@ -24,14 +23,6 @@ get "/planner/new" do
   @days = Day.all
   erb(:'todo_list/new')
 end
-
-
-
-
-
-
-
-
 
 #CREATE
 post "/planner" do

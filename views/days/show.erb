@@ -18,16 +18,35 @@
             </div>
           </div>
         </div>
+
+        <form method="post" action="/notes/<%= note.id %>/delete">
+          <button type="submit">
+            <img class"delete-icon" src="/images/edit.svg" width="23px">
+          </button>
+
+
+        <!-- <div class="edit-delete-container">
+          <img class="edit-icon"                     src="/images/edit.svg" width="22px">
+          <br><br>
+          <img class="delete-icon" src="/images/delete.svg" width="22px">
+        </div> -->
+      </form>
+
+
+
+
+
       </td>
     </tr>
     <% end %>
   </table>
 
 
-    <!-- <form method="post" action="/notes/<%= note.id %>/delete">
-      <input class"delete-icon" type="submit" style="background-image: url('https://www.materialui.co/materialIcons/action/delete_black_192x192.png'); width: 23px;">
-    </form>
-  </div> -->
+
+
+
+
+  </div>
 </div>
 
 
