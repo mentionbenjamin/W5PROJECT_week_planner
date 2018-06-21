@@ -66,18 +66,15 @@
   opacity: 0.2;
 }
 
-
-.delete-button:hover {
+input.delete-button:hover {
   opacity: 1;
   transition: 0.5s ease;
   cursor: pointer;
 }
 
-
 table {
   width: 100%;
 }
-
 td {
   padding-bottom: 38px;
   border: 20px;
