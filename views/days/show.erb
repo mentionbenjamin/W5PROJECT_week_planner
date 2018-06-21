@@ -4,17 +4,21 @@
     <h1 class="day-notes-header">notes for <mark class="note-mark">monday...</mark></h1>
 
     <div class="individual-note-container">
-       <div class="actual-note">
-          <%= note.title %>
-          <hr class="note-spacer-hr">
-          <span class="note-description">
-          <%= note.description %>
-          </span>
+      <div class="actual-note">
+        <%= note.title %>
+        <hr class="note-spacer-hr">
+        <span class="note-description">
+        <%= note.description %>
+        </span>
       </div>
 
       <form method="post" action="/notes/<%= note.id %>/delete">
         <input class"delete-icon" type="submit" style="background-image: url('https://www.materialui.co/materialIcons/action/delete_black_192x192.png'); width: 23px;">
       </form>
+    </div>
+  </div>
+
+<% end %>
 
 
       <!-- <div class="edit-delete-container">
@@ -22,19 +26,3 @@
         <br><br>
           <img class="delete-icon" src="https://www.materialui.co/materialIcons/action/delete_black_192x192.png" width="26px">
       </div> -->
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<% end %>
