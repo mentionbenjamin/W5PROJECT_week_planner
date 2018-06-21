@@ -6,6 +6,10 @@ require_relative('../models/day')
 require('pry')
 also_reload("./models/*")
 
+get '/days' do
+  @days = Day.all
+  erb(:'days/index')
+end
 
 #INDEX
 get '/notes' do

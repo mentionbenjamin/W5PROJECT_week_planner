@@ -64,21 +64,3 @@
 <% end %>
 
 <!--- POP UP FORM WINDOW END --->
-
-
-<!--- DAILY DOTS START --->
-
-<input type="checkbox" id="click-dot">
-<label for="click-dot">
-
-  <% @days.each do |day| %>
-
-    <a href="/days/<%= day.id %>">
-      <img class="dot <%= day.day.downcase %>" src="/images/home-<%=day.day.downcase%>.svg">
-    </a>
-  <% end %>
-
-  <img class="dot add-vanish" src="/images/home-add.svg">
-</label>
-
-<!--- DAILY DOTS END --->
