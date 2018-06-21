@@ -36,8 +36,13 @@
         <div class="weekday-checkbox-container">
           <% for day in @days  %>
           <div class="each-checkbox">
-            <input type="checkbox" name="day_array[]" value="<%= day.id  %>" id="<%= day.day.downcase %>">
-            <label for="<%= day.day.downcase %>">.</label>
+            <input type="checkbox"
+            name="day_array[]"
+            value="<%= day.id  %>"
+            id="<%= day.day.downcase %>">
+            <label for="<%= day.day.downcase %>">
+              .
+            </label>
             <br>
           </div>
           <% end %>
@@ -64,15 +69,12 @@
 <% for day in @days  %>
 
 <div class="each-checkbox">
-
   <input type="checkbox"
   name="day_array[]"
   value="<%= day.id  %>"
   id="<%= day.day.downcase %>">
-
   <label for="<%= day.day.downcase %>">.</label>
 </div>
-
 <% end %>
 
 <!--- WEEKDAY DOTS END --->

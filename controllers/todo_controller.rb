@@ -25,6 +25,14 @@ get "/planner/new" do
   erb(:'todo_list/new')
 end
 
+
+
+
+
+
+
+
+
 #CREATE
 post "/planner" do
   note = Note.new(params)
