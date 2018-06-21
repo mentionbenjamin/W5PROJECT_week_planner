@@ -17,6 +17,8 @@ end
 get '/days/:id' do
   @days = Day.all
   @day = Day.find(params['id'].to_i)
+
+  @dayname = Day.find(@day.id()).day()
   erb(:'days/show')
 end
 

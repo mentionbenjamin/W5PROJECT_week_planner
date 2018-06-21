@@ -1,32 +1,32 @@
 
-  <div class="day-notes-container">
-    <h1 class="day-notes-header">notes for <mark class="note-mark">monday...</mark></h1>
+<div class="day-notes-container">
+  <h1 class="day-notes-header">notes for <mark class="note-mark"><%= @dayname.downcase %>...</mark></h1>
 
-    <% for note in @day.notes %>
+  <% for note in @day.notes %>
 
-    <div class="individual-note-container">
-      <div class="actual-note">
-        <p><%= note.title %></p>
+  <div class="individual-note-container">
+    <div class="actual-note">
+      <p><%= note.title %></p>
 
-        <hr class="note-spacer-hr">
+      <hr class="note-spacer-hr">
 
-        <span class="note-description">
-          <%= note.description %>
-        </span>
-      </div>
-      <% end %>
-
-
-      <form method="post" action="/notes/<%= note.id %>/delete">
-        <input class"delete-icon" type="submit" style="background-image: url('https://www.materialui.co/materialIcons/action/delete_black_192x192.png'); width: 23px;">
-      </form>
+      <span class="note-description">
+        <%= note.description %>
+      </span>
     </div>
+    <% end %>
+
+
+    <form method="post" action="/notes/<%= note.id %>/delete">
+      <input class"delete-icon" type="submit" style="background-image: url('https://www.materialui.co/materialIcons/action/delete_black_192x192.png'); width: 23px;">
+    </form>
   </div>
+</div>
 
 
 
-      <!-- <div class="edit-delete-container">
-          <img class="edit-icon" style="https://cdn3.iconfinder.com/data/icons/block/32/box_edit-512.png" width="23px">
-        <br><br>
-          <img class="delete-icon" src="https://www.materialui.co/materialIcons/action/delete_black_192x192.png" width="26px">
-      </div> -->
+<!-- <div class="edit-delete-container">
+<img class="edit-icon" style="https://cdn3.iconfinder.com/data/icons/block/32/box_edit-512.png" width="23px">
+<br><br>
+<img class="delete-icon" src="https://www.materialui.co/materialIcons/action/delete_black_192x192.png" width="26px">
+</div> -->
