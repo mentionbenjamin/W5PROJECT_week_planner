@@ -37,3 +37,20 @@
 <br><br>
 <img class="delete-icon" src="https://www.materialui.co/materialIcons/action/delete_black_192x192.png" width="26px">
 </div> -->
+
+
+
+
+
+
+<!--- DAILY DOTS START --->
+<input type="checkbox" id="click-dot">
+<label for="click-dot-nav">
+  <% @days.each do |day| %>
+    <a href="/days/<%= day.id %>">
+      <img class="dot-nav <%= day.day.downcase %>" src="/images/home-<%=day.day.downcase%>.svg">
+    </a>
+  <% end %>
+  <img class="dot-nav add-vanish" src="/images/home-add.svg">
+</label>
+<!--- DAILY DOTS END --->

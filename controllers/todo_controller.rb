@@ -43,5 +43,5 @@ post "/planner" do
     todo = Todo.new(params)
     todo.save
   end
-  redirect to("/planner/new#reference-to-form")
+  redirect to("/planner/new")
 end

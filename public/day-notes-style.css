@@ -93,3 +93,99 @@ padding-bottom: 120px;
   border: 20px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+.dot-nav { /* actual dot to click on */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#click-dot-nav {
+    display: none;
+  }
+#click-dot-nav:checked + label img.sunday {
+  animation: left-sunday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-sunday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-0) translateX()}
+  100% {transform: translateX(-270px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.monday {
+  animation: left-monday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-monday{
+  0%{opacity: 0;}
+  50% {transform: translateX(-180px) translateX()}
+  100% {transform: translateX(-180px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.tuesday {
+  animation: left-tuesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-tuesday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-90px) translateX()}
+  100% {transform: translateX(-90px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.wednesday {
+  animation: left-wednesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-wednesday {
+  0%{opacity: 0}
+  100% {opacity: 1;}
+}
+#click-dot-nav:checked + label img.thursday {
+  animation: left-thursday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-thursday {
+  0%{opacity: 0;}
+  50% {transform: translateX(90px) translateX()}
+  100% {transform: translateX(90px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.friday {
+  animation: left-friday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-friday{
+  0%{opacity: 0;}
+  50% {transform: translateX(180px) translateX()}
+  100% {transform: translateX(180px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.saturday {
+  animation: left-saturday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-saturday {
+  0%{opacity: 0;}
+  50% {transform: translateX(270px) translateX()}
+  100% {transform: translateX(270px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.add-vanish {
+  animation: left-add-vanish 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-add-vanish {
+  0%{opacity: 1;}
+  100% {transform: translateX(500px); opacity: 0;}
+}
+
+  /*--- DAILY DOTS END ---*/
