@@ -63,10 +63,3 @@ Before asking an instructor for help this week, you should be ready to answer th
 ## Attendance
 
 The cohort will meet at the usual time every morning. Your attendance is recorded every day as normal.
-
-## PDA Reminder
-
-Remember to gather evidence for your PDA this week. This should only take 5 minutes:
-
-* Go to your [PDA Checklist](https://github.com/codeclan/pda/blob/master/Student%20Checklist/Student%20Checklist.pdf)
-* Submit your PDA evidence (screenshots, etc.) to your own PDA repo
