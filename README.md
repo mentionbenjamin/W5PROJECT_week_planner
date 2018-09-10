@@ -19,7 +19,7 @@ Planning, experimentation, time management, GIT, BE/FE integration, consolidatio
 ## Installing
 ```
 Download & unpack folder
-Terminal = CD track-yoself-master
+Terminal = CD into folder
 Terminal = ruby app.rb
 Browser  = http://localhost:4567
 ```
