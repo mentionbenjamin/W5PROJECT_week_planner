@@ -18,6 +18,6 @@ Planning, experimentation, time management, GIT, BE/FE integration, consolidatio
 
 ## Installing
 ```
-ruby app.rb
-http://localhost:4567
+ruby app.rb (in terminal)
+http://localhost:4567 (in browser)
 ```
