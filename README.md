@@ -19,9 +19,11 @@ Planning, experimentation, time management, GIT, BE/FE integration, consolidatio
 ## Installing
 ```
 Download & unpack folder
-__Terminal__
+
+Terminal
   CD into folder
   ruby app.rb
-__Browser__
+  
+Browser
   http://localhost:4567
 ```
