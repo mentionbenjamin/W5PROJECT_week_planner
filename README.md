@@ -7,7 +7,7 @@ Built a spending tracker web application with an animated UI.
 6 days, followed by a presentation on the final day. 
 
 ### Objectives
-GIT, planning, collaboration, experimentation, time management, BE/FE integration, consolidation, UX/UI.
+Planning, experimentation, time management, GIT, BE/FE integration, consolidation, UX/UI.
 
 
 ## Built with
