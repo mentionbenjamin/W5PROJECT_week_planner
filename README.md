@@ -1,7 +1,7 @@
 # Track Yo'self
 
 ## Synopsis
-Built a spending tracker web application with an animated UI
+Built a spending tracker web application with an animated UI.
 
 ## Deadline
 6 days, followed by a presentation on the final day. 
