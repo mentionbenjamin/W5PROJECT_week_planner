@@ -49,7 +49,6 @@ day5.save()
 day6.save()
 day7.save()
 
-
 todo1 = Todo.new({
   "note_id" => note1.id,
   "day_id" => day1.id
@@ -62,7 +61,6 @@ todo2 = Todo.new({
 
 todo1.save()
 todo1.save()
-
 
 binding.pry
 nil

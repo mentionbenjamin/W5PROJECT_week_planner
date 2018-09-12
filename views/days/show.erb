@@ -19,6 +19,7 @@
           </div>
         </div>
 
+
         <form method="post" action="/notes/<%= note.id %>/delete">
           <button class"delete-button" type="submit" style="border: 0; background: transparent; cursor: pointer; float: right; margin-right: 100px; margin-top: 34px; opacity: 0.3;">
             <img class"delete-icon" src="/images/delete.svg" width="23px" alt="submit" />
@@ -65,7 +66,7 @@
 
 
 
-<!--- DAILY DOTS START --->
+<!-- - DAILY DOTS START --->
 <input type="checkbox" id="click-dot">
 <label for="click-dot-nav">
   <% @days.each do |day| %>
@@ -75,4 +76,4 @@
   <% end %>
   <img class="dot-nav add-vanish" src="/images/home-add.svg">
 </label>
-<!--- DAILY DOTS END --->
+<!--- DAILY DOTS END - -->
