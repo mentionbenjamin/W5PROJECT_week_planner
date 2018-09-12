@@ -1,0 +1,109 @@
+.add-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  max-width: 100%;
+  width: 600px;
+  height: 490px;
+  margin: 0 auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.form-contents-container {
+  padding-top: 30px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.form-header {
+  padding: 5px;
+  font-size: 30px;
+  font-weight: 100;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: -0.3px;
+}
+.note-mark {
+  font-weight: 500;
+  background: none;
+  color: white;
+}
+input {
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  width: 80%;
+  resize: none;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* ADD A NOTE TITLE START */
+
+#input-box-container {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+.input-box {
+  width: 300px !important;
+  height: 20px;
+  font-size: 20px;;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  /* font-style: italic; */
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 11px;
+}
+.text-area {
+  opacity: 1;
+  background-color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 0.6;
+  font-style: italic;
+}
+.ph {
+  position: absolute;
+  left: 0%;
+  content: '';
+  height: 28.5px;
+  background: white;
+  transition: all 0.5s linear;
+  width: 0;
+  bottom: 0px;
+  opacity: 0.1;
+  border-radius: 17px;
+}
+input.input-box:hover, input.input-box:focus ~ span {
+  width: 322px;
+  cursor: text;
+}
+input.input-box[type="text"], textarea { /* no border outline of input box */
+  outline: none;
+  box-shadow:none !important;
+}
+input.input-box:focus::-webkit-input-placeholder { /* placeholder text disappears on click */
+  color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+/* ADD A NOTE TITLE END */

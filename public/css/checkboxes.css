@@ -1,0 +1,79 @@
+.weekday-checkbox-header {
+  padding-top: 50px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+}
+.weekday-checkbox-container {
+  padding-top: 20px;
+  transform: scale(1.5);
+}
+.each-checkbox {
+  display:inline-block;
+}
+input[type="checkbox"]{
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+label[for="sunday"]{
+  background: url("../images/sunday.svg") no-repeat;
+}
+label[for="monday"]{
+  background: url("../images/monday.svg") no-repeat;
+}
+label[for="tuesday"]{
+  background: url("../images/tuesday.svg") no-repeat;
+}
+label[for="wednesday"]{
+  background: url("../images/wednesday.svg") no-repeat;
+}
+label[for="thursday"]{
+  background: url("../images/thursday.svg") no-repeat;
+}
+label[for="friday"]{
+  background: url("../images/friday.svg") no-repeat;
+}
+label[for="saturday"]{
+  background: url("../images/saturday.svg") no-repeat;
+}
+label[for="sunday"],
+label[for="monday"],
+label[for="tuesday"],
+label[for="wednesday"],
+label[for="thursday"],
+label[for="friday"],
+label[for="saturday"]{
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  color: rgba(255,0,0,0);
+}
+input:checked + label[for="sunday"],
+input:checked + label[for="monday"],
+input:checked + label[for="tuesday"],
+input:checked + label[for="wednesday"],
+input:checked + label[for="thursday"],
+input:checked + label[for="friday"],
+input:checked + label[for="saturday"]{
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+/* --- WEEKDAY CHECKBOXES END --- */
+
+.submit {
+  cursor: pointer;
+  transition: 1s;
+  width: 50px;
+  margin-top: 18px;
+}
+.submit:hover {
+  transform: rotate(360deg);
+}

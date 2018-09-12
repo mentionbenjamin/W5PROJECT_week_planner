@@ -1,0 +1,164 @@
+.dot-nav { /* actual dot to click on */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#click-dot-nav {
+    display: none;
+  }
+#click-dot-nav:checked + label img.sunday {
+  animation: left-sunday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-sunday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-0) translateX()}
+  100% {transform: translateX(-270px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.monday {
+  animation: left-monday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-monday{
+  0%{opacity: 0;}
+  50% {transform: translateX(-180px) translateX()}
+  100% {transform: translateX(-180px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.tuesday {
+  animation: left-tuesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-tuesday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-90px) translateX()}
+  100% {transform: translateX(-90px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.wednesday {
+  animation: left-wednesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-wednesday {
+  0%{opacity: 0}
+  100% {opacity: 1;}
+}
+#click-dot-nav:checked + label img.thursday {
+  animation: left-thursday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-thursday {
+  0%{opacity: 0;}
+  50% {transform: translateX(90px) translateX()}
+  100% {transform: translateX(90px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.friday {
+  animation: left-friday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-friday{
+  0%{opacity: 0;}
+  50% {transform: translateX(180px) translateX()}
+  100% {transform: translateX(180px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.saturday {
+  animation: left-saturday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-saturday {
+  0%{opacity: 0;}
+  50% {transform: translateX(270px) translateX()}
+  100% {transform: translateX(270px); opacity: 1;}
+}
+#click-dot-nav:checked + label img.add-vanish {
+  animation: left-add-vanish 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes left-add-vanish {
+  0%{opacity: 1;}
+  100% {transform: translateX(500px); opacity: 0;}
+}
+
+
+
+
+
+
+/*-- DAY DOTS SPREAD --*/
+
+#click-dot {
+  display: none;
+}
+#click-dot:checked + label img.sunday {
+  animation: move-left-sunday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-sunday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-270px) translateX()}
+  100% {transform: translateX(-270px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.monday {
+  animation: move-left-monday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-monday{
+  0%{opacity: 0;}
+  50% {transform: translateX(-180px) translateX()}
+  100% {transform: translateX(-180px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.tuesday {
+  animation: move-left-tuesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-tuesday {
+  0%{opacity: 0;}
+  50% {transform: translateX(-90px) translateX()}
+  100% {transform: translateX(-90px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.wednesday {
+  animation: move-left-wednesday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-wednesday {
+  0%{opacity: 0}
+  100% {transform: translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.thursday {
+  animation: move-left-thursday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-thursday {
+  0%{opacity: 0;}
+  50% {transform: translateX(90px) translateX()}
+  100% {transform: translateX(90px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.friday {
+  animation: move-left-friday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-friday{
+  0%{opacity: 0;}
+  50% {transform: translateX(180px) translateX()}
+  100% {transform: translateX(180px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.saturday {
+  animation: move-left-saturday 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-saturday {
+  0%{opacity: 0;}
+  50% {transform: translateX(270px) translateX()}
+  100% {transform: translateX(270px) translateY(300px); opacity: 1;}
+}
+#click-dot:checked + label img.add-vanish {
+  animation: move-left-add-vanish 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes move-left-add-vanish {
+  0%{opacity: 0;}
+  100% {transform: translateX(270px) translateY(3000px); opacity: 0;}
+}
