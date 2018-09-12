@@ -58,29 +58,10 @@
       </div>
     </div>
   </form>
-  <!--- ADD FORM END --->
+    <!--- ADD FORM END --->
 </div>
-</div>
-
-
-
-<!--- WEEKDAY DOTS START --->
-
-<% for day in @days  %>
-<div class="each-checkbox">
-  <input type="checkbox"
-         name="day_array[]"
-        value="<%= day.id  %>"
-           id="<%= day.day.downcase %>">
-  <label for="<%= day.day.downcase %>">.</label>
-</div>
-<% end %>
-
-<!--- WEEKDAY DOTS END --->
-
 
 <!--- POP UP FORM WINDOW END --->
-
 
 <!--- DAILY DOTS START --->
 <input type="checkbox" id="click-dot">

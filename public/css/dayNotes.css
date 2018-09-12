@@ -1,18 +1,15 @@
 .day-notes-container {
   padding-top: 40px;
   background: rgb(252,77,124);
-  background: linear-gradient(144deg,
-              rgba(252,77,124,1) 0%,
-              rgba(252,66,128,1) 31%,
-              rgba(252,88,69,1) 100%);
+  background: linear-gradient(144deg, rgba(252,77,124,1) 0%, rgba(252,66,128,1) 31%, rgba(252,88,69,1) 100%);
   border-radius: 30px;
   display: inline-block;
-  width: 600px;
-  height: 500px;
+  width: 582px;
+  height: 460px;
   margin: 0 auto;
   position: absolute;
   margin: auto;
-  top: -40px;
+  top: -83px;
   right: 0;
   bottom: 0;
   left: 0;

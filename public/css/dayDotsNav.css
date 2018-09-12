@@ -1,0 +1,18 @@
+.day-dots-nav-container {
+  position: absolute;
+  margin: auto;
+  top: 655px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 627px;
+  height: 100px;
+}
+.day-dots-nav-container a {
+  padding: 17.3px;
+}
+
+.day-notes-dot-nav { /* actual dot to click on */
+  cursor: pointer;
+}
