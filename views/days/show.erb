@@ -1,77 +1,56 @@
-
 <div class="day-notes-container">
-  <h1 class="day-notes-header">notes for <mark class="note-mark"><%= @dayname.downcase %>...</mark></h1>
+
+  <h1 class="day-notes-header">
+    notes for
+    <mark class="note-mark">
+      <%= @dayname.downcase %>...
+    </mark>
+  </h1>
 
   <table>
     <% for note in @day.notes %>
-
-    <tr>
-      <td>
-        <div class="individual-note-container-parent">
-          <div class="individual-note-container-child">
-            <div class="actual-note">
-              <%= note.title %>
-              <hr class="note-spacer-hr">
-              <span class="note-description">
-                <%= note.description %>
-              </span>
+      <tr>
+        <td>
+          <div class="individual-note-container-parent">
+            <div class="individual-note-container-child">
+              <div class="actual-note">
+                <%= note.title %>
+                <hr class="note-spacer-hr">
+                <span class="note-description">
+                  <%= note.description %>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
 
-
-        <form method="post" action="/notes/<%= note.id %>/delete">
-          <button class"delete-button" type="submit" style="border: 0; background: transparent; cursor: pointer; float: right; margin-right: 100px; margin-top: 34px; opacity: 0.3;">
-            <img class"delete-icon" src="/images/delete.svg" width="23px" alt="submit" />
-          </button>
-
-
-
-
-
-        <!-- <div class="edit-delete-container">
-          <img class="edit-icon"                     src="/images/edit.svg" width="22px">
-          <br><br>
-          <img class="delete-icon" src="/images/delete.svg" width="22px">
-        </div> -->
-      </form>
-
-
-
-
-
-      </td>
-    </tr>
+          <form method="post" action="/notes/<%= note.id %>/delete">
+            <button type="submit"
+                   style="border: 0;
+                      background: transparent;
+                          cursor: pointer;
+                           float: right;
+                    margin-right: 100px;
+                      margin-top: 34px;
+                         opacity: 0.3;">
+              <img class="delete-icon"
+                     src="/images/delete.svg"
+                   width="23px"
+                     alt="submit" />
+            </button>
+          </form>
+        </td>
+      </tr>
     <% end %>
   </table>
-
-
-
-
-
-
-  </div>
 </div>
-
-
-
-<!-- <div class="edit-delete-container">
-<img class="edit-icon" style="https://cdn3.iconfinder.com/data/icons/block/32/box_edit-512.png" width="23px">
-<br><br>
-<img class="delete-icon" src="https://www.materialui.co/materialIcons/action/delete_black_192x192.png" width="26px">
-</div> -->
-
-
-
-
-
 
 <!-- - DAILY DOTS START --->
 <input type="checkbox" id="click-dot">
 <label for="click-dot-nav">
   <% @days.each do |day| %>
     <a href="/days/<%= day.id %>">
-      <img class="dot-nav <%= day.day.downcase %>" src="/images/home-<%=day.day.downcase%>.svg">
+      <img class="dot-nav <%= day.day.downcase %>"
+             src="/images/home-<%=day.day.downcase%>.svg">
     </a>
   <% end %>
   <img class="dot-nav add-vanish" src="/images/home-add.svg">

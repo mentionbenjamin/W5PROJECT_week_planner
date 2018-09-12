@@ -5,8 +5,8 @@ class NoteTest < MiniTest::Test
 
   def setup()
     options = {
-      "id" => 1,
-      "title" => "Dinner at Grannies",
+               "id" => 1,
+            "title" => "Dinner at Grannies",
       "description" => "3pm, dress smart, all family attending"
     }
     @note = Note.new(options)

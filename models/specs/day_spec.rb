@@ -5,9 +5,10 @@ class DayTest < MiniTest::Test
 
   def setup()
     options = {
-      "id" => 1,
+       "id" => 1,
       "day" => "Monday"
     }
+    
     @day = Day.new(options)
   end
 

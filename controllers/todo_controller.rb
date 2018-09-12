@@ -6,6 +6,7 @@ require_relative('../models/day')
 require('pry')
 also_reload("./models/*")
 
+#ALL DAYS
 get '/days' do
   @days = Day.all
   erb(:'days/index')
@@ -14,7 +15,7 @@ end
 #INDEX
 get '/planner' do
   @note = Note.all
-  @day = Day.all
+   @day = Day.all
   erb(:index)
 end
 
@@ -29,10 +30,12 @@ post "/planner" do
   note = Note.new(params)
   note.save()
   params["note_id"] = note.id
+
   for day in params["day_array"]
     params["day_id"] = day
     todo = Todo.new(params)
     todo.save
   end
+  
   redirect to("/planner/new")
 end

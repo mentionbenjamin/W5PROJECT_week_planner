@@ -1,17 +1,15 @@
-<h1>list all notes homepage</h1>
-
-
 <!-- search all of notes & print note title & description -->
 <% for note in @notes %>
-<p>Title: <%= note.title %></p>
-<p>Description: <%= note.description %></p>
 
-<p><a href="/notes/<%= note.id %>/edit">Edit Note</a></p>
+  <p>Title: <%= note.title %></p>
+  <p>Description: <%= note.description %></p>
 
-<form method="post" action="/notes/<%= note.id %>/delete">
-  <input type="submit" value="Delete Note"/>
-</form>
+  <p><a href="/notes/<%= note.id %>/edit">Edit Note</a></p>
 
-<hr>
+  <form method="post" action="/notes/<%= note.id %>/delete">
+    <input type="submit" value="Delete Note"/>
+  </form>
+
+  <hr>
 
 <% end %>

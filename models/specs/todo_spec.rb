@@ -7,9 +7,9 @@ class TodoTest < MiniTest::Test
 
   def setup()
     options = {
-      "id" => 1,
+           "id" => 1,
       "note_id" => @note_id,
-      "day_id" => @day_id
+       "day_id" => @day_id
     }
     @todo = Todo.new(options)
   end

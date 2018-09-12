@@ -1,12 +1,18 @@
 <form method="post" action="/notes/<%= @note.id %>">
-
+  
   <label for="title">Title of note:</label>
-  <input id="title" type="text" name="title" value="<%= @note.title %>" />
+  <input id="title"
+       type="text"
+       name="title"
+      value="<%= @note.title %>" />
 
   <br>
 
   <label for="description">Description of note:</label>
-  <input id="description" type="text" name="description" value="<%= @note.description %>" />
+  <input id="description"
+       type="text"
+       name="description"
+      value="<%= @note.description %>" />
 
   <br>
 
