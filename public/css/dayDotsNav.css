@@ -1,3 +1,6 @@
+a {
+  text-decoration:none;
+}
 .day-dots-nav-container {
   position: absolute;
   margin: auto;
@@ -12,12 +15,9 @@
 .day-dots-nav-container a {
   padding: 17.3px;
 }
-
 .day-notes-dot-nav { /* actual dot to click on */
   cursor: pointer;
 }
-
-
 .add-dot { /* actual dot to click on */
   cursor: pointer;
   z-index: 100;
@@ -29,13 +29,6 @@
   bottom: 0;
   left: 0;
 }
-
-a{text-decoration:none;}
-
-
 .day-dot-add {
   position: absolute;
-  /* left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%); */
 }

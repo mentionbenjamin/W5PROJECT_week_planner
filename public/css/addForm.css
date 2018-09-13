@@ -5,7 +5,6 @@
   text-align: center;
   display: inline-block;
   max-width: 100%;
-
   margin: 0 auto;
   position: absolute;
   margin: auto;
@@ -15,7 +14,7 @@
   left: 0;
 }
 .form-contents-container {
-  padding-top: 30px;
+  padding-top: 48px;
   position: absolute;
   margin: auto;
   top: 0;

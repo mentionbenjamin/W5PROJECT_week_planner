@@ -60,7 +60,4 @@ todo2 = Todo.new({
 })
 
 todo1.save()
-todo1.save()
-
-binding.pry
-nil
+todo2.save()

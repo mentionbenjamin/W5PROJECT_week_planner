@@ -9,9 +9,6 @@
   left: 0;
   cursor: pointer;
 }
-
-/* PULSATING DOT START */
-
 .click-dot-add {
   position: absolute;
   left: 50%;
