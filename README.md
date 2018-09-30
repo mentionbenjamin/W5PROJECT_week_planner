@@ -1,15 +1,14 @@
 # Track Yo'self
 
 ## Synopsis
-Built a spending tracker web application with an animated UI.
+Built a spending tracker web application with an animated UI in 6 days, followed by a presentation on the final day. 
 
-## Deadline
-6 days, followed by a presentation on the final day. 
 
 ## Built with
 * Ruby
 * Sinatra
-* HTML/CSS
+* HTML
+* CSS
 * postgreSQL
 
 ## Installing
