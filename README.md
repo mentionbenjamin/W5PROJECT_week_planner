@@ -9,7 +9,7 @@ Built a spending tracker web application with an animated UI in 6 days, followed
 * Sinatra
 * HTML
 * CSS
-* postgreSQL
+* PostgreSQL
 
 ## Installing
 ```
